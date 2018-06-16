@@ -7,7 +7,9 @@ process.stdin.on('readable', function() {
 		case '/exit': 
 			process.stdout.write('Quitting app!\n');
 			process.exit();
-		
+		case '/lang':
+			process.stdout.write(process.env.lang);
+			break;
 		case '/version': 
 			console.log(process.version);
 			break;
