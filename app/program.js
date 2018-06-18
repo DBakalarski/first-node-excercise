@@ -10,10 +10,10 @@ process.stdin.on('readable', function() {
 			process.stdout.write('Quitting app!\n');
 			process.exit();
 		case '/lang':
-			process.stdout.write(process.env.lang);
+			console.log('Language:', process.env.lang);
 			break;
 		case '/version': 
-			console.log(process.version);
+			console.log("Node version:", process.versions.node);
 			break;
 		case '/getOSinfo':
 			OSinfo.print();
